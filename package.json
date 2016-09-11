@@ -11,14 +11,44 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "*"
     ],
     "main": "./out/src/extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.sayHello",
-            "title": "Hello World"
-        }]
+        "commands": [
+        {
+            "command": "web-search.google",
+            "title": "WebSearch : Google"
+        },
+        {
+            "command": "web-search.msdn",
+            "title": "WebSearch : MSDN"
+        },
+        {
+            "command": "web-search.reddit",
+            "title": "WebSearch : Reddit"
+        },
+        {
+            "command": "web-search.vscode",
+            "title": "WebSearch : VSCode Reference"
+        },
+        {
+            "command": "web-search.stackoverflow",
+            "title": "WebSearch : StackOverflow"
+        }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "VSCode WebSearch configuration",
+            
+            "properties": {
+                "web-search.browser": {
+                "type": "string",
+                "default": "",
+                "description": "Specify the browser path"
+                }
+            }
+        }
     },
     "scripts": {
         "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
