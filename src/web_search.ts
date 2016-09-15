@@ -43,14 +43,13 @@ export namespace web_search {
 		 * name
 		 */
 		public searchGoogle(keyword:string) {
-			const baseUrl = "http://www.google.com/search?q=";
+			const baseUrl = "https://www.google.com/search?q=";
     		this.execSearch(baseUrl, keyword);
 		}
 
 		public searchMSDN(keyword:string) {
     		const baseUrl = "https://social.msdn.microsoft.com/Search/en-US?query=";
     		this.execSearch(baseUrl, keyword);
-    
 		}
 
 		public searchReddit(keyword:string) {
@@ -70,8 +69,7 @@ export namespace web_search {
 
 		private execSearch(baseUrl:string, keyword:string) {
     		const url = baseUrl + this.fixedEncodeURIComponent(keyword);
-    		const exePath = "C:\\Program Files\\Waterfox\\waterfox.exe";
-    		cp.spawn(exePath, [url]);  
+    		cp.spawn(this.browserPath, [url]);  
 		}
 		
 		private fixedEncodeURIComponent (str) {
