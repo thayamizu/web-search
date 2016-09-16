@@ -19,12 +19,19 @@ export function activate(context: vscode.ExtensionContext) {
         return; 
     }
 
+
+
+
     // The command has been defined in the package.json file
     // Now provide the implementation of the command with  registerCommand
     // The commandId parameter must match the command field in package.json
     let google = vscode.commands.registerCommand('web-search.google', () => {
-        vscode.window.showInputBox().then((text)=>{
-            command.searchGoogle(text);
+        let text:string = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
+        vscode.window.showInputBox({placeHolder:text, value:text}).then( value =>{
+            if (value == "") {
+                value =text;
+            }
+            command.searchGoogle(value);
         })
     });
     let msdn = vscode.commands.registerCommand('web-search.msdn', () => {
