@@ -20,14 +20,12 @@ export function activate(context: vscode.ExtensionContext) {
     }
 
 
-
-
     // The command has been defined in the package.json file
     // Now provide the implementation of the command with  registerCommand
     // The commandId parameter must match the command field in package.json
     let google = vscode.commands.registerCommand('web-search.google', () => {
         let text:string = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
-        vscode.window.showInputBox({placeHolder:text, value:text}).then( value =>{
+        vscode.window.showInputBox({value:text}).then( value =>{
             if (value == "") {
                 value =text;
             }
@@ -35,27 +33,43 @@ export function activate(context: vscode.ExtensionContext) {
         })
     });
     let msdn = vscode.commands.registerCommand('web-search.msdn', () => {
+        let text:string = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
         // Display a message box to the user
-        vscode.window.showInputBox().then((text)=>{
+        vscode.window.showInputBox({value:text}).then((value)=>{
+            if (value == "") {
+                value =text;
+            }
             command.searchMSDN(text);
         })
     });
     let reddit = vscode.commands.registerCommand('web-search.reddit', () => {
+        let text:string = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
         // Display a message box to the user
-        vscode.window.showInputBox().then((text)=>{
+        vscode.window.showInputBox({value:text}).then((value)=>{
+            if (value == "") {
+                value =text;
+            }
             command.searchReddit(text);
         })
     });
     let vscRef = vscode.commands.registerCommand('web-search.vscode', () => {
+        let text:string = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
         // Display a message box to the user
-        vscode.window.showInputBox().then((text)=>{
+        vscode.window.showInputBox({value:text}).then((value)=>{
+            if (value == "") {
+                value =text;
+            }
             command.searchVSCode(text);
         })
     });
     let stackOVerFlow = vscode.commands.registerCommand('web-search.stackoverflow', () => {
+        let text:string = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
         // Display a message box to the user
-        vscode.window.showInputBox().then((text)=>{
-            command.searchStackOverflow(text);
+        vscode.window.showInputBox({value:text}).then((value)=>{
+            if (value == "") {
+                value =text;
+            }
+            command.searchStackOverflow(value);
         })
     });
 
