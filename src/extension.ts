@@ -15,7 +15,7 @@ export function activate(context: vscode.ExtensionContext) {
     //initialization
     let command = new web_search.WebSearch();
     if (!command.init()) {
-        vscode.window.showErrorMessage('Please setting your browser path !!');
+        vscode.window.showErrorMessage('Please setting the browser path !!');
         return; 
     }
 

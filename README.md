@@ -31,7 +31,7 @@ Your need to set your using browser path.
 
 Initial release of web-search.
 
-## Working with Markdown
-[](https://github.io/thayamizu/web-search)
+## Repository
+[web-search](https://github.com/thayamizu/web-search.git)
 
 **Enjoy!**
