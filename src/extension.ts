@@ -26,6 +26,9 @@ export function activate(context: vscode.ExtensionContext) {
     let google = vscode.commands.registerCommand('web-search.google', () => {
         let text:string = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
         vscode.window.showInputBox({value:text}).then( value =>{
+            if (value == undefined) {
+                return;
+            }
             if (value == "") {
                 value =text;
             }
@@ -34,8 +37,12 @@ export function activate(context: vscode.ExtensionContext) {
     });
     let msdn = vscode.commands.registerCommand('web-search.msdn', () => {
         let text:string = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
+        vscode.window.showInputBox()
         // Display a message box to the user
         vscode.window.showInputBox({value:text}).then((value)=>{
+            if (value == undefined) {
+                return;
+            }
             if (value == "") {
                 value =text;
             }
@@ -46,6 +53,9 @@ export function activate(context: vscode.ExtensionContext) {
         let text:string = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
         // Display a message box to the user
         vscode.window.showInputBox({value:text}).then((value)=>{
+            if (value == undefined) {
+                return;
+            }
             if (value == "") {
                 value =text;
             }
@@ -56,6 +66,9 @@ export function activate(context: vscode.ExtensionContext) {
         let text:string = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
         // Display a message box to the user
         vscode.window.showInputBox({value:text}).then((value)=>{
+            if (value == undefined) {
+                return;
+            }
             if (value == "") {
                 value =text;
             }
@@ -66,6 +79,9 @@ export function activate(context: vscode.ExtensionContext) {
         let text:string = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
         // Display a message box to the user
         vscode.window.showInputBox({value:text}).then((value)=>{
+            if (value == undefined) {
+                return;
+            }
             if (value == "") {
                 value =text;
             }
@@ -83,4 +99,4 @@ export function activate(context: vscode.ExtensionContext) {
 
 // this method is called when your extension is deactivated
 export function deactivate() {
-}
+}       
