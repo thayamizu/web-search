@@ -89,6 +89,14 @@ export namespace web_search {
 		}
 
 		/**
+		 * Search on Unity3D
+		 */
+		public searchUnity3D(keyword:string) {
+			const baseUrl="https://docs.unity3d.com/Manual/30_search.html?q=";
+			this.execSearch(baseUrl, keyword);
+		}
+
+		/**
 		 * Excute Search on browser. 
 		 */
 		private execSearch(baseUrl:string, keyword:string) {

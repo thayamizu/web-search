@@ -88,13 +88,26 @@ export function activate(context: vscode.ExtensionContext) {
             command.searchStackOverflow(value);
         })
     });
-
+    let unity3DRef = vscode.commands.registerCommand('web-search.unity3D', () => {
+        let text:string = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
+        // Display a message box to the user
+        vscode.window.showInputBox({value:text}).then((value)=>{
+            if (value == undefined) {
+                return;
+            }
+            if (value == "") {
+                value =text;
+            }
+            command.searchUnity3D(value);
+        })
+    });
 
     context.subscriptions.push(google);
     context.subscriptions.push(msdn);
     context.subscriptions.push(reddit);
     context.subscriptions.push(vscRef);
     context.subscriptions.push(stackOVerFlow);
+    context.subscriptions.push(unity3DRef);
 }
 
 // this method is called when your extension is deactivated

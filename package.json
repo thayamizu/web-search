@@ -2,7 +2,7 @@
     "name": "web-search",
     "displayName": "WebSearch",
     "description": "search information using your browser",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "crest",
     "engines": {
         "vscode": "^1.0.0"
@@ -35,6 +35,10 @@
         {
             "command": "web-search.stackoverflow",
             "title": "WebSearch : StackOverflow"
+        },
+        {
+            "command": "web-search.unity3D",
+            "title": "WebSearch : Unity3D"
         }
         ],
         "configuration": {
