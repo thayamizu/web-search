@@ -6,24 +6,25 @@ The supported search engine is follow.
  - Reddit
  - Visual Studio Code Reference
  - StackOverflow
+ - Unity3D Reference
 
 ## Features
-if your want to search some word on Google.
-you type Ctrl+Shift+P, and type 'google'.
+If your want to search some word on Google.
+You type Ctrl+Shift+P, and type 'google'.
 ![](https://raw.githubusercontent.com/thayamizu/web-search/master/img/image1.png)
 
-input search word. e.g. vscode.
+Input search word. e.g. vscode.
 
 ![](https://raw.githubusercontent.com/thayamizu/web-search/master/img/image2.png)
 
-you'll look the search result on google your using browser.
+You'll look the search result on google.
 
 ![](https://raw.githubusercontent.com/thayamizu/web-search/master/img/image3.png)
 
 ## Extension Settings
-Your need to set your using browser path.
+Your need to set your browser path.
 
-* `web-search.browser`: your using browser.
+* `web-search.browser`: your browser.
 
 ## Release Notes
 
@@ -32,7 +33,12 @@ Your need to set your using browser path.
 Initial release of web-search.
 
 ### 0.0.2
-fixed image url in README.md.
+
+Fixed image url in README.md.
+
+### 0.0.3
+
+Add Unity3D reference search.
 
 ## Repository
 [web-search](https://github.com/thayamizu/web-search.git)
