@@ -10,15 +10,15 @@ The supported search engine is follow.
 ## Features
 if your want to search some word on Google.
 you type Ctrl+Shift+P, and type 'google'.
-![](./img/image1.png)
+![](https://raw.githubusercontent.com/thayamizu/web-search/master/img/image1.png)
 
 input search word. e.g. vscode.
 
-![](./img/image2.png)
+![](https://raw.githubusercontent.com/thayamizu/web-search/master/img/image2.png)
 
 you'll look the search result on google your using browser.
 
-![](./img/image3.png)
+![](https://raw.githubusercontent.com/thayamizu/web-search/master/img/image3.png)
 
 ## Extension Settings
 Your need to set your using browser path.
