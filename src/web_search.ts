@@ -49,7 +49,7 @@ export namespace web_search {
 		}
 		
 		/**
-		 * Search in Google 
+		 * Search on Google 
 		 */
 		public searchGoogle(keyword:string) {
 			const baseUrl = "https://www.google.com/search?q=";
@@ -57,7 +57,7 @@ export namespace web_search {
 		}
 
 		/**
-		 * Search in MSDN
+		 * Search on MSDN
 		 */
 		public searchMSDN(keyword:string) {
     		const baseUrl = "https://social.msdn.microsoft.com/Search/en-US?query=";
