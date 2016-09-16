@@ -27,9 +27,12 @@ Your need to set your using browser path.
 
 ## Release Notes
 
-### 1.0.0
+### 0.0.1
 
 Initial release of web-search.
+
+### 0.0.2
+fixed image url in README.md.
 
 ## Repository
 [web-search](https://github.com/thayamizu/web-search.git)

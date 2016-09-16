@@ -2,7 +2,7 @@
     "name": "web-search",
     "displayName": "WebSearch",
     "description": "search information using your browser",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "crest",
     "engines": {
         "vscode": "^1.0.0"
