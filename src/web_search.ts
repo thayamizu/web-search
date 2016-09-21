@@ -47,53 +47,88 @@ export namespace web_search {
 		public set browserPath(v : string) {
 			this._browserPath = v;
 		}
+	
+		/**
+		 * Error Mesage
+		 */
+		private ErrMessage : string =  "Can't excute browser process.";
 		
 		/**
 		 * Search on Google 
 		 */
 		public searchGoogle(keyword:string) {
-			const baseUrl = "https://www.google.com/search?q=";
-    		this.execSearch(baseUrl, keyword);
+			try {
+				const baseUrl = "https://www.google.com/search?q=";
+    			this.execSearch(baseUrl, keyword);
+			}
+			catch (e) {
+				vscode.window.showErrorMessage(this.ErrMessage);
+			}
 		}
 
 		/**
 		 * Search on MSDN
 		 */
 		public searchMSDN(keyword:string) {
-    		const baseUrl = "https://social.msdn.microsoft.com/Search/en-US?query=";
-    		this.execSearch(baseUrl, keyword);
+			try {
+    			const baseUrl = "https://social.msdn.microsoft.com/Search/en-US?query=";
+    			this.execSearch(baseUrl, keyword);
+			}
+			catch (e) {
+				vscode.window.showErrorMessage(this.ErrMessage);
+			}
 		}
 
 		/**
 		 * Search on Reddit
 		 */
 		public searchReddit(keyword:string) {
-    		const baseUrl = "https://www.reddit.com/r/node/search?q=";
-    		this.execSearch(baseUrl, keyword);
+			try {
+    			const baseUrl = "https://www.reddit.com/r/node/search?q=";
+    			this.execSearch(baseUrl, keyword);
+			}
+			catch (e) {
+				vscode.window.showErrorMessage(this.ErrMessage);
+			}
 		}
 
 		/**
 		 * Search on Visual Studio Code Reference
 		 */
 		public searchVSCode(keyword:string) {
-    		const baseUrl="https://code.visualstudio.com/Search?q=";
-    		this.execSearch(baseUrl, keyword);
+			try {
+    			const baseUrl="https://code.visualstudio.com/Search?q=";
+    			this.execSearch(baseUrl, keyword);
+			}
+			catch (e) {
+				vscode.window.showErrorMessage(this.ErrMessage);
+			}
 		}
 
 		/**
 		 * Search on StackOverFlow  
 		 */
 		public searchStackOverflow(keyword:string) {
-    		const baseUrl="http://stackoverflow.com/search?q=";
-		    this.execSearch(baseUrl, keyword);
+			try {
+    			const baseUrl="http://stackoverflow.com/search?q=";
+		    	this.execSearch(baseUrl, keyword);
+			}
+			catch (e) {
+				vscode.window.showErrorMessage(this.ErrMessage);
+			}
 		}
 
 		/**
 		 * Search on Unity3D
 		 */
 		public searchUnity3D(keyword:string) {
-			const baseUrl="https://docs.unity3d.com/Manual/30_search.html?q=";
-			this.execSearch(baseUrl, keyword);
+			try {
+				const baseUrl="https://docs.unity3d.com/Manual/30_search.html?q=";
+				this.execSearch(baseUrl, keyword);
+			}
+			catch (e) {
+				vscode.window.showErrorMessage(this.ErrMessage);
+			}
 		}
 
 		/**
