@@ -24,12 +24,9 @@ export function activate(context: vscode.ExtensionContext) {
     // The commandId parameter must match the command field in package.json
     let google = vscode.commands.registerCommand('web-search.google', () => {
         let text:string = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
-        vscode.window.showInputBox({value:text}).then( value =>{
+        vscode.window.showInputBox().then( value =>{
             if (value == undefined) {
                 return;
-            }
-            if (value == "") {
-                value =text;
             }
             command.searchGoogle(value);
         })
@@ -38,12 +35,9 @@ export function activate(context: vscode.ExtensionContext) {
         let text:string = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
         vscode.window.showInputBox()
         // Display a message box to the user
-        vscode.window.showInputBox({value:text}).then((value)=>{
+        vscode.window.showInputBox().then((value)=>{
             if (value == undefined) {
                 return;
-            }
-            if (value == "") {
-                value =text;
             }
             command.searchMSDN(text);
         })
@@ -51,12 +45,9 @@ export function activate(context: vscode.ExtensionContext) {
     let reddit = vscode.commands.registerCommand('web-search.reddit', () => {
         let text:string = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
         // Display a message box to the user
-        vscode.window.showInputBox({value:text}).then((value)=>{
+        vscode.window.showInputBox().then((value)=>{
             if (value == undefined) {
                 return;
-            }
-            if (value == "") {
-                value =text;
             }
             command.searchReddit(text);
         })
@@ -64,12 +55,9 @@ export function activate(context: vscode.ExtensionContext) {
     let vscRef = vscode.commands.registerCommand('web-search.vscode', () => {
         let text:string = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
         // Display a message box to the user
-        vscode.window.showInputBox({value:text}).then((value)=>{
+        vscode.window.showInputBox().then((value)=>{
             if (value == undefined) {
                 return;
-            }
-            if (value == "") {
-                value =text;
             }
             command.searchVSCode(text);
         })
@@ -77,12 +65,9 @@ export function activate(context: vscode.ExtensionContext) {
     let stackOVerFlow = vscode.commands.registerCommand('web-search.stackoverflow', () => {
         let text:string = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
         // Display a message box to the user
-        vscode.window.showInputBox({value:text}).then((value)=>{
+        vscode.window.showInputBox().then((value)=>{
             if (value == undefined) {
                 return;
-            }
-            if (value == "") {
-                value =text;
             }
             command.searchStackOverflow(value);
         })
@@ -90,12 +75,9 @@ export function activate(context: vscode.ExtensionContext) {
     let unity3DRef = vscode.commands.registerCommand('web-search.unity3D', () => {
         let text:string = vscode.window.activeTextEditor.document.getText(vscode.window.activeTextEditor.selection);
         // Display a message box to the user
-        vscode.window.showInputBox({value:text}).then((value)=>{
+        vscode.window.showInputBox().then((value)=>{
             if (value == undefined) {
                 return;
-            }
-            if (value == "") {
-                value =text;
             }
             command.searchUnity3D(value);
         })
