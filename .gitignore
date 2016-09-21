@@ -1,5 +1,12 @@
-out
-node_modules
-.vscode/.BROWSE.VC.DB
-.vscode/.BROWSE.VC.DB-shm
-.vscode/.BROWSE.VC.DB-wal
+#ignore folder
+/out/
+/node_modules/
+/.vscode-test
+
+#ignore specific files.
+.BROWSE.VC.DB
+.BROWSE.VC.DB-shm
+.BROWSE.VC.DB-wal
+
+#ignore extension.
+*.vsix
