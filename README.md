@@ -42,7 +42,7 @@ Add Unity3D reference search.
 
 ### 0.0.4
 
-bugFix
+Bugfix
 
 ## Repository
 [web-search](https://github.com/thayamizu/web-search.git)
