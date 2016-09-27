@@ -39,7 +39,7 @@ export function activate(context: vscode.ExtensionContext) {
             if (value == undefined) {
                 return;
             }
-            command.searchMSDN(text);
+            command.searchMSDN(value);
         })
     });
     let reddit = vscode.commands.registerCommand('web-search.reddit', () => {
@@ -49,7 +49,7 @@ export function activate(context: vscode.ExtensionContext) {
             if (value == undefined) {
                 return;
             }
-            command.searchReddit(text);
+            command.searchReddit(value);
         })
     });
     let vscRef = vscode.commands.registerCommand('web-search.vscode', () => {
@@ -59,7 +59,7 @@ export function activate(context: vscode.ExtensionContext) {
             if (value == undefined) {
                 return;
             }
-            command.searchVSCode(text);
+            command.searchVSCode(value);
         })
     });
     let stackOVerFlow = vscode.commands.registerCommand('web-search.stackoverflow', () => {

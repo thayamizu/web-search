@@ -22,9 +22,9 @@ You'll look the search result on google.
 ![](https://raw.githubusercontent.com/thayamizu/web-search/master/img/image3.png)
 
 ## Extension Settings
-Your need to set your browser path.
+You need to set your browser path.
 
-* `web-search.browser`: your browser.
+* `web-search.browser`: your browser path.
 
 ## Release Notes
 
@@ -39,6 +39,10 @@ Fixed image url in README.md.
 ### 0.0.3
 
 Add Unity3D reference search.
+
+### 0.0.4
+
+bugFix
 
 ## Repository
 [web-search](https://github.com/thayamizu/web-search.git)
