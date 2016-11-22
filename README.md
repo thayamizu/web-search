@@ -26,6 +26,11 @@ You need to set your browser path.
 
 * `web-search.browser`: your browser path.
 
+## Requirements
+- vscode 1.0 later
+- Windows OS   
+  **This extension is not tested on Mac Products and Linux OS.** 
+
 ## Release Notes
 
 ### 0.0.1
@@ -43,6 +48,11 @@ Add Unity3D reference search.
 ### 0.0.4
 
 Bugfix
+
+### 0.0.5
+
+Update README.md
+
 
 ## Repository
 [web-search](https://github.com/thayamizu/web-search.git)
