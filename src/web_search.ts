@@ -145,7 +145,7 @@ export namespace web_search {
 		private fixedEncodeURIComponent (str) {
   			return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
     				return '%' + c.charCodeAt(0).toString(16);
-  					});
+  			});
 		}
 	}
 }
